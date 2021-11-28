@@ -1,0 +1,22 @@
+html,
+body {
+ background-color: #000000;
+  padding: 0;
+  width :400px;
+   display: block;
+     padding-top:30px;
+   margin: auto;
+}
+
+canvas {
+  
+  display: block;
+  margin: 0 auto;
+}
+
+button {
+  margin: 10px auto;
+  display: block;
+  padding: 20px;
+}
+
