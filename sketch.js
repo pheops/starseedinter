@@ -105,7 +105,7 @@ function addImg() {
 		if (i<835){
       i++;
     }else{
-      i=1;
+      i=0;
     }
 
   
