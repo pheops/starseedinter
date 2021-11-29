@@ -6,7 +6,7 @@ let pause = false;
 
 var textures = [];
 
-var totalTextures = 100;
+var totalTextures = 800;
 var loading = true;
 var counter = 0;
 
@@ -89,6 +89,7 @@ function setup() {
 for (let i = 0; i < totalTextures; i++){
      Texture('data1/starseed-' + i +'.png');
       }
+ 
 
 let canvas = createCanvas(400, 400);
 background(0);
@@ -101,7 +102,7 @@ function addImg() {
   	//create an if statement
    	// if i is less than 3, add 1 to the value of i
   	// if it's more than that, set the value of i to equal 1
-		if (i<99){
+		if (i<799){
       i++;
     }else{
       i=1;

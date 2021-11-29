@@ -1,10 +1,12 @@
 html, body {
  background-color: #000000;
   padding: 0;
-  width :400px;
+  width :402px;
    display: block;
-     padding-top:30px;
+   padding-top:30px;
    margin: auto;
+
+   overscroll-behavior: none;
 
 }
 canvas {
