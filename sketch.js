@@ -91,7 +91,7 @@ for (let i = 0; i < totalTextures; i++){
       }
  
 
-let canvas = createCanvas(300, 300);
+let canvas = createCanvas(400, 400);
 background(0);
  
   
