@@ -6,7 +6,7 @@ let pause = false;
 
 var textures = [];
 
-var totalTextures = 800;
+var totalTextures = 100;
 var loading = true;
 var counter = 0;
 
@@ -102,7 +102,7 @@ function addImg() {
   	//create an if statement
    	// if i is less than 3, add 1 to the value of i
   	// if it's more than that, set the value of i to equal 1
-		if (i<799){
+		if (i<99){
       i++;
     }else{
       i=1;
