@@ -1,7 +1,7 @@
 html, body {
  background-color: #000000;
   padding: 0;
-  width: 100%;
+  width :400px;
    display: block;
    padding-top:30px;
    margin: auto;
@@ -10,7 +10,7 @@ html, body {
 
 }
 canvas {
-  display: block;
+
   border: 1px solid white;
 }
 
