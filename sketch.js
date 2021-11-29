@@ -119,7 +119,7 @@ function addImg() {
 
     //keep cycling every second, specify duration using t, declared at top
     setTimeout(addImg, t);
-  	//print(i);
+  	print(i);
   }
  }
 
