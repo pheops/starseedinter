@@ -6,7 +6,7 @@ let pause = false;
 
 var textures = [];
 
-var totalTextures = 100;
+var totalTextures = 836;
 var loading = true;
 var counter = 0;
 
@@ -102,26 +102,24 @@ function addImg() {
   	//create an if statement
    	// if i is less than 3, add 1 to the value of i
   	// if it's more than that, set the value of i to equal 1
-		if (i<99){
+		if (i<835){
       i++;
     }else{
       i=1;
     }
 
-  //concatenate a string to add dog image name
+  
     img = textures[i];
    //img.filter(GRAY);
     image(img, 0, 0);
-    //look at the CSS for added class
-    //this controls the width of the img
-    //img.addClass("dogImg");
+  
 
     //remove the image, specify duration using t, declared at top
     //setTimeout(imgRemove, t);
 
     //keep cycling every second, specify duration using t, declared at top
     setTimeout(addImg, t);
-  	print(i);
+  	//print(i);
   }
  }
 
