@@ -1,7 +1,16 @@
 let img;
 let i=1;
 
-let pause = false;
+let pause1 = false;
+let pause2 = false;
+let pause3 = false;
+let pause4 = false;
+let pause5 = false;
+let pause6 = false;
+let pause7 = false;
+let pause8 = false;
+let pause9 = false;
+let pause10 = false;
 
 var textures = [];
 var totalTextures = 800;
@@ -25,15 +34,32 @@ let angle2 = 0.0;
 // }
 
 function preload() {
-  soundFile = loadSound("logo/modular.mp3");
-  //iconPause = loadImage("logo/pause.png");
-  //iconPlay = loadImage("logo/play.png");
+  //modular = loadSound("data/modular.mp3");
+  drone1 = loadSound("data/drone1.mp3");
+  //drone2 = loadSound("data/drone2.mp3");
+  //drone3 = loadSound("data/drone3.mp3");
+  //drone4 = loadSound("data/drone4.mp3");
+  //drone5 = loadSound("data/drone5.mp3");
+  arp = loadSound("data/arp.mp3");
+  arp2 = loadSound("data/arp2.mp3");
+  lownote = loadSound("data/low.mp3");
+  melody = loadSound("data/melody.mp3");
+  beat = loadSound("data/beat.mp3");
+  morpha = loadSound("data/morpha.mp3");
+  beatPhrase = loadSound("data/beatphrase.mp3");
+  water = loadSound("data/water.mp3");
+  onenote = loadSound("data/onenote.mp3");
+  fifth = loadSound("data/fifth.mp3");
+
+
+  //iconPause = loadImage("data/pause.png");
+  //iconPlay = loadImage("data/play.png");
 }
 
 
 function Texture(filename) {
   loadImage(filename, texLoaded);
-  //loadSound('logo/modular.mp3');
+  //loadSound('data/modular.mp3');
   function texLoaded(tex) {
     //console.log(filename);
     textures.push(tex);
@@ -62,31 +88,8 @@ function Texture(filename) {
 
 function displayButtons(){
 
-  // button = createImg('logo/play.png');
-  // // button.width = 5
-  // // button.height = 5
-  // button.style('float', 'right');
-  // button.style('width', '50px');
-  // button.style('padding', '5px');
-  // button.mousePressed(toggleSong);
 
-  // button2 = createImg('logo/pause.png');
-  // button2.width = 5
-  // button2.height = 5
-  // button2.style('float', 'right');
-  // button2.style('padding', '5px');
-  // button2.style('width', '50px');
-  // button2.mousePressed(toggleSong);
-
-  // button3 = createImg('logo/reload.png');
-  // button3.width = 5
-  // button3.height = 5
-  // button3.style('float', 'right');
-  // button3.style('padding', '5px');
-  // button3.style('width', '50px');
-  // button3.mousePressed(reLoad);
-
-  buttonSave = createImg('logo/save.png');
+  buttonSave = createImg('data/reddot.png');
   buttonSave.width = 5
   buttonSave.height = 5
   buttonSave.style('float', 'right');
@@ -95,11 +98,7 @@ function displayButtons(){
   buttonSave.mousePressed(saveArt);
 
  
-
- 
-
-
-  button1 = createImg('logo/one.png');
+  button1 = createImg('data/one.png');
   button1.width = 5
   button1.height = 5
   button1.style('float', 'left');
@@ -107,89 +106,89 @@ function displayButtons(){
   button1.style('width', '50px');
   button1.mousePressed(rotateAmt = this.orbitspeed);
   button1.mousePressed(choosePreset1);
-  console.log(preset)
+  //console.log(preset)
 
 
-  button2 = createImg('logo/two.png');
+  button2 = createImg('data/two.png');
   button2.width = 5
   button2.height = 5
   button2.style('float', 'left');
   button2.style('padding', '5px');
   button2.style('width', '50px');
   button2.mousePressed(choosePreset2);
-  console.log(preset)
+  //console.log(preset)
  
-  button3 = createImg('logo/three.png');
+  button3 = createImg('data/three.png');
   button3.width = 5
   button3.height = 5
   button3.style('float', 'left');
   button3.style('padding', '5px');
   button3.style('width', '50px');
   button3.mousePressed(choosePreset3);
-  console.log(preset)
+  //console.log(preset)
 
-  button4 = createImg('logo/four.png');
+  button4 = createImg('data/four.png');
   button4.width = 5
   button4.height = 5
   button4.style('float', 'left');
   button4.style('padding', '5px');
   button4.style('width', '50px');
   button4.mousePressed(choosePreset4);
-  console.log(preset)
+  //console.log(preset)
 
-   button5 = createImg('logo/five.png');
+  button5 = createImg('data/five.png');
   button5.width = 5
   button5.height = 5
   button5.style('float', 'left');
   button5.style('padding', '5px');
   button5.style('width', '50px');
   button5.mousePressed(choosePreset5);
-  console.log(preset)
+  //console.log(preset)
 
-   button6 = createImg('logo/six.png');
+  button6 = createImg('data/six.png');
   button6.width = 5
   button6.height = 5
   button6.style('float', 'left');
   button6.style('padding', '5px');
   button6.style('width', '50px');
   button6.mousePressed(choosePreset6);
-  console.log(preset)
+  //console.log(preset)
 
-   button7 = createImg('logo/seven.png');
+  button7 = createImg('data/seven.png');
   button7.width = 5
   button7.height = 5
   button7.style('float', 'left');
   button7.style('padding', '5px');
   button7.style('width', '50px');
   button7.mousePressed(choosePreset7);
-  console.log(preset)
+  //console.log(preset)
 
-   button8 = createImg('logo/eight.png');
+  button8 = createImg('data/eight.png');
   button8.width = 5
   button8.height = 5
   button8.style('float', 'left');
   button8.style('padding', '5px');
   button8.style('width', '50px');
   button8.mousePressed(choosePreset8);
-  console.log(preset)
+  //console.log(preset)
 
-   button9 = createImg('logo/nine.png');
+  button9 = createImg('data/nine.png');
   button9.width = 5
   button9.height = 5
   button9.style('float', 'left');
   button9.style('padding', '5px');
   button9.style('width', '50px');
   button9.mousePressed(choosePreset9);
-  console.log(preset)
+  //console.log(preset)
 
-  button10 = createImg('logo/ten.png');
+  button10 = createImg('data/ten.png');
   button10.width = 5
   button10.height = 5
   button10.style('float', 'left');
   button10.style('padding', '5px');
   button10.style('width', '50px');
   button10.mousePressed(choosePreset10);
-  console.log(preset)
+  //console.log(preset)
 }
 
 
@@ -197,6 +196,17 @@ function displayButtons(){
 function choosePreset1(){
 preset = 1;
 console.log(preset)
+//toggleBeat();
+
+  // if (drone1.isPlaying()) {
+  //    drone1.pause();
+  //    pause1=false;
+  // } else {
+  //    drone1.loop();
+  //    pause1 = true;
+  // }
+
+  drone1.play();
 
  background(0);
 
@@ -230,7 +240,7 @@ button10.style('background-color', 'black');
 function choosePreset2(){
 preset = 2;
 console.log(preset)
-
+arp.play();
 
 button1.style('background-color', 'black');
 button2.style('background-color', 'coral');
@@ -262,6 +272,7 @@ button10.style('background-color', 'black');
 function choosePreset3(){
 preset = 3;
 console.log(preset)
+arp2.play();
 
 button1.style('background-color', 'black');
 button2.style('background-color', 'black');
@@ -292,6 +303,7 @@ button10.style('background-color', 'black');
 function choosePreset4(){
 preset = 4;
 console.log(preset)
+lownote.play();
 
 button1.style('background-color', 'black');
 button2.style('background-color', 'black');
@@ -321,7 +333,8 @@ button10.style('background-color', 'black');
 
 function choosePreset5(){
 preset = 5;
-console.log(preset)
+morpha.play();
+//console.log(preset)
 button1.style('background-color', 'black');
 button2.style('background-color', 'black');
 button3.style('background-color', 'black');
@@ -350,6 +363,7 @@ button10.style('background-color', 'black');
 
 function choosePreset6(){
 preset = 6;
+melody.play();
 console.log(preset)
 button1.style('background-color', 'black');
 button2.style('background-color', 'black');
@@ -379,6 +393,7 @@ button10.style('background-color', 'black');
 
 function choosePreset7(){
 preset = 7;
+water.play();
 console.log(preset)
 button1.style('background-color', 'black');
 button2.style('background-color', 'black');
@@ -408,6 +423,7 @@ button10.style('background-color', 'black');
 
 function choosePreset8(){
 preset = 8;
+fifth.play();
 console.log(preset)
 button1.style('background-color', 'black');
 button2.style('background-color', 'black');
@@ -437,6 +453,7 @@ button10.style('background-color', 'black');
 
 function choosePreset9(){
 preset = 9;
+onenote.play();
 console.log(preset)
 button1.style('background-color', 'black');
 button2.style('background-color', 'black');
@@ -466,7 +483,10 @@ button10.style('background-color', 'black');
 
 function choosePreset10(){
 preset = 10;
-console.log(preset)
+//console.log(preset)
+beatPhrase.play();
+//toggleBeat();
+
 button1.style('background-color', 'black');
 button2.style('background-color', 'black');
 button3.style('background-color', 'black');
@@ -726,21 +746,12 @@ class Bubble {
 
 
 
-function toggleSong() {
-  if (soundFile.isPlaying()) {
-    soundFile.pause();
-    // button.style('background-color', 'black');
-    // button2.style('background-color', 'coral');
-pause=false;
-
-  
+function toggleBeat() {
+  if (beat.isPlaying()) {
+     beat.pause();
+     pause1=false;
   } else {
-    soundFile.loop();
-     // button.style('background-color', 'coral');
-     // button2.style('background-color', 'black');
-     pause = true;
-     //addImg();
-   
+     beat.loop();
+     pause1 = true;
   }
-
 }
